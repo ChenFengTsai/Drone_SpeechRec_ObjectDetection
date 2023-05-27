@@ -19,6 +19,7 @@ class Voice_Detection:
         mic = sr.Microphone()
         
         # Listen for the oral command
+        print('Voice detection activate. Listening......')
         with mic as source:
             audio = r.listen(source, timeout = 10, phrase_time_limit = 3)
         try:   
@@ -34,21 +35,6 @@ class Voice_Detection:
         except sr.UnknownValueError:
             pass   
      
-        # with self.microphone as source:
-        #     audio = self.recognizer.listen(source, timeout=10, phrase_time_limit=3)
-
-        # try:
-        #     command = self.recognizer.recognize_google(audio).lower()
-        #     print(command)
-
-        #     if "land" in command:
-        #         self.drone.land()
-        #     elif "takeoff" in command:
-        #         self.drone.takeoff()
-        #     else:
-        #         print("I don't understand the command")
-        # except sr.UnknownValueError:
-        #     pass
 
 
 

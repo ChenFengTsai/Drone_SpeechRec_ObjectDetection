@@ -1,17 +1,17 @@
 from djitellopy import Tello
 import sys
-sys.path.append('./')
+import os
 
 import speech_recognition as sr
 from voice_detection import Voice_Detection
-from gesture_detection import Gesture_Detection
-from object_detection import Object_Tracking
+#from gesture_detection import Gesture_Detection
+#from object_detection import Object_Tracking
 import configparser
 
-from yolov5.models.experimental import attempt_load
-from yolov5.utils.general import check_img_size, non_max_suppression, scale_coords
-from yolov5.utils.datasets import letterbox
-from yolov5.utils.plots import plot_one_box
+# from yolov5.models.experimental import attempt_load
+# from yolov5.utils.general import check_img_size, non_max_suppression, scale_coords
+# from yolov5.utils.datasets import letterbox
+# from yolov5.utils.plots import plot_one_box
 
 
 def main(drone, ip):
@@ -37,9 +37,11 @@ def main(drone, ip):
 
 if  __name__ == "__main__":
     config = configparser.ConfigParser()
-    config.read('yolov5/config.ini')
-    wifi_name = config.get('wifi', 'wifi_name')
-    wifi_password = config.get('wifi', 'wifi_password')
+    # Get the parent directory path
+    parent_dir = os.path.dirname(os.path.abspath(__file__))
+    print(parent_dir)
+    dir = os.path.join(parent_dir, '..','config.ini')
+    config.read(dir)
     ip = config.get('wifi', 'ip')
     
     # initilize the drone

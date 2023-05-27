@@ -31,11 +31,15 @@ To use the script, follow the steps below:
 python3 main.py --func [function]
 ```
 Replace [function] with one of the following options:
-* `voice` - Trigger voice detection function with SpeechRecognition.
 * `gesture` - Trigger gesture detection function with MediaPipe.
 * `object` - Trigger object detection function with YOLOv5.
 
-4. Follow the prompts or instructions displayed on the screen to interact with the drone based on the chosen function.
+4. The drone will at first trigger voice detection to takeoff, and then conduct the operation you specified.
+Voice commands:
+* `apple` - Takeoff
+* `chicken` - Land
+
+5. Follow the prompts or instructions displayed on the screen to interact with the drone based on the chosen function.
 
 ## Configuration
 The script uses a configuration file (config.ini) to specify the IP address of the drone's Wi-Fi network. You can modify the IP address in the config.ini file to match your drone's IP address.

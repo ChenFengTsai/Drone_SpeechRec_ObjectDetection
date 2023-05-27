@@ -1,7 +1,12 @@
 # Drone Surveillance System with Speech recognition, Object & Gesture Detection
 This script allows you to trigger different functions of a drone using command-line arguments. You can use this script to control the drone's behavior based on voice commands, gestures, or object detection.
 
-![Alt Text](image/gesture_detection.png)
+# Demonstration
+<div style="display: flex;">
+  <img src="image/gesture_detection.pn" alt="Image 1" width="300px" style="margin-right: 20px;">
+  <img src="image/object_detection.pn" alt="Image 2" width="300px">
+</div>
+
 ## Prerequisites
 1. Clone or download this repository to your local machine.
 ```

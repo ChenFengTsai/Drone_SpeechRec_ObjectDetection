@@ -2,6 +2,7 @@
 This script allows you to trigger different functions of a drone using command-line arguments. You can use this script to control the drone's behavior based on voice commands, gestures, or object detection.
 
 # Demonstration
+Figure left: Gesture Detection; Figure right: Object Detection
 <div style="display: flex;">
   <img src="image/gesture_detection.png" alt="Gesture Detection" width="300px" style="margin-right: 20px;">
   <img src="image/object_detection.png" alt="Object Detection" width="300px">

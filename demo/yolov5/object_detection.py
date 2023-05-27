@@ -11,7 +11,9 @@ dir = os.path.join(parent_dir, '..')
 sys.path.append(dir)
 from voice_detection import Voice_Detection
 
-sys.path.append('./')
+parent_dir = os.path.dirname(os.path.abspath(__file__))
+
+sys.path.append(parent_dir)
 from models.experimental import attempt_load
 from utils.general import check_img_size, non_max_suppression, scale_coords
 from utils.datasets import letterbox
@@ -35,8 +37,6 @@ class Object_Tracking:
 
         self.drone.connect()
         self.drone.streamon()
-        print(f"Battery life percentage: {self.drone.get_battery()}%")
-        self.drone.takeoff()
         time.sleep(5)
 
     def process_frame(self, frame):
@@ -81,14 +81,10 @@ class Object_Tracking:
         self.imgsz = check_img_size(640, s=self.model.stride.max())
         self.model.to(self.device).eval()
 
-        self.drone.connect()
-        self.drone.streamon()
-        print(f"Battery life percentage: {self.drone.get_battery()}%")
-        self.drone.takeoff()
+        # self.drone.connect()
+        # self.drone.streamon()
         time.sleep(3)
-        #self.drone.rotate_clockwise(60)
-        #self.drone.takeoff()
-        found_bottle = False
+
         while not self.bottle_detected:
             self.drone.rotate_clockwise(45)
             time.sleep(3)

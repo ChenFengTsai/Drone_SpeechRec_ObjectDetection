@@ -26,9 +26,6 @@ def main(drone, ip):
     ot.track_object()
     print('object tracking done')
     
-    # *voice detection to land*
-    #vd = Voice_Detection(drone)
-    #vd.fly_drones_voice()
     
 
 if  __name__ == "__main__":
@@ -43,5 +40,6 @@ if  __name__ == "__main__":
     drone = Tello(ip)
     drone.connect()
     drone.streamon()
+    print(f"Battery life percentage: {drone.get_battery()}%")
     
     main(drone, ip)

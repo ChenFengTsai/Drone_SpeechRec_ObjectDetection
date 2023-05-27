@@ -19,7 +19,7 @@ class Voice_Detection:
         mic = sr.Microphone()
         
         # Listen for the oral command
-        print('Voice detection activate. Listening......')
+        print('Voice detection activates. Listening......')
         with mic as source:
             audio = r.listen(source, timeout = 10, phrase_time_limit = 3)
         try:   

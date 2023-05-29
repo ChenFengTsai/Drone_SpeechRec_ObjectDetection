@@ -35,6 +35,7 @@ Replace `[function]` with one of the following options:
 * `object` - Trigger object detection function with YOLOv5.
 
 4. The drone will at first trigger voice detection to takeoff, and then conduct the operation you specified.
+
 Voice commands:
 * `apple` - Takeoff
 * `chicken` - Land

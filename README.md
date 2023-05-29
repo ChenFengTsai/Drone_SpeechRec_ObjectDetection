@@ -30,7 +30,7 @@ To use the script, follow the steps below:
 ```
 python3 main.py --func [function]
 ```
-Replace [function] with one of the following options:
+Replace `[function]` with one of the following options:
 * `gesture` - Trigger gesture detection function with MediaPipe.
 * `object` - Trigger object detection function with YOLOv5.
 

@@ -26,7 +26,7 @@ To use the script, follow the steps below:
 
 2. Open a terminal or command prompt and navigate to the root directory of the cloned repository.
 
-3. Run the main.py script with the desired function argument:
+3. Navigate to the `demo` folder and run the main.py script with the desired function argument:
 ```
 python3 main.py --func [function]
 ```

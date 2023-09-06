@@ -1,5 +1,5 @@
 # Drone Surveillance System with Speech recognition, Object & Gesture Detection
-This script allows you to trigger different functions of a drone using command-line arguments. You can use this script to control the drone's behavior based on voice commands, gestures, or object detection.
+This script allows you to trigger different functions of a drone using command-line arguments. You can use this script to control the drone's behavior based on voice commands, gestures, or object detection. This project aims to create an interactive and versatile system for controlling a DJI Tello drone, offering users multiple input methods for a more engaging and user-friendly experience while ensuring safety and ease of use.
 
 # Demonstration
 Figure left: Gesture Detection; Figure right: Object Detection
